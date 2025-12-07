@@ -6,7 +6,7 @@ O esperado de um projeto incial:
 - [x] Fazer o auto do tema (detecta preferência do sistema)
 - [x] Multi línguas ([vue-i18n](https://vue-i18n.intlify.dev/))
 - [x] Colocar mais palavras na tradução (i18n.json)
-- [ ] Colocar os ícones do bootstrap5
+- [x] Colocar os ícones do bootstrap5
 - [ ] Pensar no site com a pasta layouts?!?
 - [ ] Busca interna ??? [algolia](https://www.algolia.com/developers) [typesense](https://typesense.org/)
 - [ ] Blog / Notícias ???
@@ -113,3 +113,5 @@ Componentes de páginas / views (ex: Home, About, Contact, Tasks, News etc) - Ca
 README.md	- Documento explicativo do repositório: descreve instalação, configuração, ideias, instruções para rodar/builder, funcionalidades previstas e como usar o projeto como base.
 
 Configurações do build/tooling (ex: vite.config.js, tsconfig.json, etc)	- Arquivos de configuração do ambiente de desenvolvimento, build e TypeScript — garantem que o projeto compile corretamente, com suporte a Vue 3 + Bootstrap 5 + TypeScript.
+
+Ícones dinâmicos do Bootstrap 5 foram adicionados usando uma função que realiza um mapeamento dinâmico usando o nome da rota para retornar a classe de ícone específica do bootstrap, logo após isso aplicando no template através da vinculação de classes dentro de cada router-link.

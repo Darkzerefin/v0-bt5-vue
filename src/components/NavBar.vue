@@ -64,6 +64,29 @@ const goToSearch = () => {
     query.value = "";
   }
 };
+/* classe dos icones */
+const getRouteIcon = (routeName: string | undefined): string => {
+  if (!routeName) return 'bi-link-45deg';
+
+  switch (routeName.toLowerCase()) {
+    case 'home':
+      return 'bi-house-door-fill';
+    case 'about':
+      return 'bi-info-circle-fill';
+    case 'contacts':
+      return 'bi-envelope-fill';
+    case 'news':
+      return 'bi-newspaper';
+    case 'cards':
+      return 'bi-card-list';
+    case 'courses':
+      return 'bi-book-fill';
+    case 'tasks':
+      return 'bi-check2-square';
+    default:
+      return 'bi-link-45deg';
+  }
+};
 </script>
 
 <template>
@@ -96,6 +119,7 @@ const goToSearch = () => {
               class="nav-link"
               :class="{ active: isActive(route.path) }"
             >
+            <i :class="[getRouteIcon(route.children[0]?.name), 'bi', 'me-1']"></i>
               {{
                 route.children[0]?.name
                   ? t(`routes.${route.children[0].name.toLowerCase()}`)
